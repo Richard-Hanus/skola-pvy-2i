@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Přihlašovací formulář</title>
+  <style>
+div{
+   padding: 12px;
+}
+  </style>
+
+</head>
+<body>
+
+<form action="/submit" method="POST" autocomplete="off">
+  <div>
+    <label for="username">Uživatelské jméno:</label>
+    <input type="text" id="username" name="username" placeholder="Zadejte uživatelské jméno" required>
+  </div>
+  <div>
+    <label for="password">Heslo:</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <div>
+    <label for="remember">Trvalé přihlášení:</label>
+    <input type="checkbox" id="remember" name="remember">
+  </div>
+  <div>
+    <label for="protocol">Vyberte protokol:</label>
+    <select id="protocol" name="protocol" required>
+      <option value="">Vyberte protokol</option>
+      <option value="http">HTTP</option>
+      <option value="https">HTTPS</option>
+      <option value="ftp">FTP</option>
+    </select>
+  </div>
+  <div>
+    <button type="submit">Přihlásit se</button>
+  </div>
+</form>
+
+</body>
+</html>
