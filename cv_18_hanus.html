@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+.body, html{
+    background-color: black;
+}
+
+.div1{
+    background-color: white;
+    height: 920px;
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #212529;
+}
+.top{
+    height: 230px;
+    padding-bottom: 30px;
+}
+.middle{
+    height: 250px;
+    width: 900px;
+}
+.bottom{
+    height: 300px;
+}
+
+h1{
+    text-align: center;
+}
+.table1, .td1{
+    font-size: 20px;
+    padding-left: 40px;
+    border-collapse: collapse;
+    border: 1px grey solid;
+    margin-left: 60px;
+
+}
+td, tr{
+    padding: 12px;
+}
+
+caption{
+    font-size: 30px;
+    padding-bottom: 10px;
+    color: #4da3ff;
+}
+
+p{
+    width: 600px;
+    padding-left: 40px;
+}
+
+h2{
+    padding-left: 40px;
+}
+
+
+</style>
+    </head>
+    <body>
+        <div class="div1">
+        <h1>Bezpečné prihlášování na SSH a hardwarovým U2F tokenem</h1>
+            <div class="top">
+            <table class="table1">
+                <caption>Obsah článku</caption>
+                <tr><td class="td1">Klíče SSH</td></tr>
+                <tr style="color: #4da3ff;"><td class="td1">Klíč na disku</td></tr>
+                <tr style="color: #4da3ff;"><td class="td1">U2F jako úložiště klíčů</td></tr>
+                <tr><td class="td1">Přihlášení pomocí U2F</td></tr>
+            </table>
+            </div>
+            <div class="middle">
+                <h2>Klíče v SSH</h2>
+                <table>
+                <tr>
+                <td><p>Přihlašování pomocí páru klíčů zvyšuje výrazně bezpečnost SSH. Případný útočník nemá možnost hádat kombinaci jména a hesla, pro uživatele je navíc vše pohodlnější. Nemusí si nikam ukládat unikátní složité heslo pro každou službu a pak ho vyhledávat v případě potřeby přihlášení.
+                <br><br>Místo toho si vytvoří pár klíčů: veřejný a soukromý. Veřejný klíč nahraje na všechny servery, ke kterým se chce v budoucnu přihlašovat. Soukromý klíč zůstává v souboru na lokálním disku a nesmí jej nikdy opustit.</p>
+                </td>
+                <td>
+                    <img src="img.jpg" alt="Error">
+                </td>
+            </tr>
+            </table>
+
+
+            </div>
+            <div class="bottom">
+                <h2>Klíč na disku</h2>
+                <p>Bezpečnostní riziko tu představuje především soukromý klíč uložený v běžném souboru na disku. Ten je chráněn pomocí šifrování a odemyká se do paměti, aby mohl být použit. Pro zjednodušení života správců byl vynalezen SSH agent, který si klíče drží</p>
+                <p>Dešifrovaný klíč je tak připraven k použití a pokud se chce uživatel někam přihlásit, jeho SSH klient se připojí k agentovi a vyžádá si podpis přihlašovací zprávy. Agent může být nastaven tak, že každý požadavek musí být uživatelem potvrzen, aby si libovolný proces nemohl potichu vystavovat libovolný počet podpisů.</p>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </body>
+</html>
