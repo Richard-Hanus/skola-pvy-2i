@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulář pro přidání nového čtenáře</title>
+  <style>
+    div{
+    padding: 8px;
+}
+  </style>
+</head>
+<body>
+
+<h1>Formulář pro přidání nového čtenáře</h1>
+
+<form action="odeslat.php" method="post">
+  <div>
+    <label for="jmeno_prijmeni">Jméno a příjmení:</label>
+    <input type="text" id="jmeno_prijmeni" name="jmeno_prijmeni" required>
+  </div>
+  
+  <div>
+    <label for="datum_narozeni">Datum narození:</label>
+    <input type="date" id="datum_narozeni" name="datum_narozeni" required>
+  </div>
+  
+  <div>
+    <label for="pohlavi">Pohlaví:</label><br>
+    <input type="radio" id="muz" name="pohlavi" value="muz" required>
+    <label for="muz">Muž</label><br>
+    <input type="radio" id="zena" name="pohlavi" value="zena" required>
+    <label for="zena">Žena</label><br>
+    <input type="radio" id="ostatni" name="pohlavi" value="ostatni" required>
+    <label for="ostatni">Ostatní</label>
+  </div>
+  
+  <div>
+    <label for="mesto">Město:</label>
+    <input type="text" id="mesto" name="mesto" required>
+  </div>
+  
+  <div>
+    <label for="ulice_cislo">Ulice a číslo popisné:</label>
+    <input type="text" id="ulice_cislo" name="ulice_cislo" required>
+  </div>
+  
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  
+  <div>
+    <input type="submit" value="Uložit">
+  </div>
+</form>
+
+</body>
+</html>
